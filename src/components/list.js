@@ -14,14 +14,14 @@ export default class List extends React.Component{
     return(
       <div>
       <Container className="container" fluid= {true}>
-      <Row>
-      <Col xs={4} >name </Col>
+      <Row className='heading'>
+      <Col> NAME </Col>
       <Col> || </Col>
-      <Col>sun </Col>
+      <Col> LIGHT </Col>
       <Col> || </Col>
-      <Col>water </Col>
+      <Col> WATER </Col>
       <Col> || </Col>
-      <Col>fertilize</Col>
+      <Col> FERTILIZER </Col>
       </Row>
       </Container>
       </div>
