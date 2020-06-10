@@ -27,6 +27,14 @@ code {
   font-size: 150%;
 }
 .form{
-  margin: my-auto;
+  margin: 10% ;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 120%;
 
+}
+input{
+  background:transparent;
+  outline: none;
+  border: 0px;
+  border-bottom: 1px solid black;
 }
