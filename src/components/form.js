@@ -2,7 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/container';
 import Row from 'react-bootstrap/row';
 import Col from 'react-bootstrap/col'
-
+import Plant from './plant.js'
 
 
 export default class Form extends React.Component{
@@ -37,10 +37,16 @@ export default class Form extends React.Component{
     })
   }
 
+  onSubmit = (e) =>{
+    debugger
+
+
+  }
+
 render() {
   return(
     <Container className='form'>
-      <form>
+      <form onSubmit = {this.onSubmit}>
       <Row>
       <label> plant name: </label>
       <input name="name" type='text' value={this.state.name} onChange={this.onChange}/>
