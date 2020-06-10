@@ -41,19 +41,19 @@ render() {
       </Row>
       <Row>
       <label> light: </label>
-      <input type='text' value={this.state.sun}/>
+      <input name='light' type='text' value={this.state.sun} onChange={this.onChange}/>
       </Row>
       <Row>
       <label> water: </label>
-      <input type='text' value={this.state.water}/>
+      <input name='water' type='text' value={this.state.water} onChange={this.onChange}/>
       </Row>
       <Row>
       <label> soil: </label>
-      <input type='text' value={this.state.soil}/>
+      <input name='soil' type='text' value={this.state.soil} onChange={this.onChange}/>
       </Row>
       <Row>
       <label> fertilize: </label>
-      <input type='text' value={this.state.fertilize}/>
+      <input name='fertilize' type='text' value={this.state.fertilize}/>
       </Row>
       </form>
       </Container>
