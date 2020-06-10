@@ -31,6 +31,12 @@ export default class Form extends React.Component{
     console.log(this.state)
   }
 
+  onCheck = (e) =>{
+    this.setState({
+      [e.target.name]: e.target.checked
+    })
+  }
+
 render() {
   return(
     <Container className='form'>
@@ -42,12 +48,12 @@ render() {
       <br/>
       <Row>
       <label> light: </label>
-      <input name='light' type='text' value={this.state.sun} onChange={this.onChange}/>
+      <textarea name='sun' value={this.state.sun} onChange={this.onChange}/>
       </Row>
             <br/>
       <Row>
       <label> water: </label>
-      <input name='water' type='text' value={this.state.water} onChange={this.onChange}/>
+      <textarea name='water'  value={this.state.water} onChange={this.onChange}/>
       </Row>
             <br/>
       <Row>
@@ -59,7 +65,15 @@ render() {
       <label> fertilize: </label>
       <input name='fertilize' type='text' value={this.state.fertilize}/>
       </Row>
-            <br/> 
+            <br/>
+      <Row>
+      <label> flowering?  </label>
+      <input type="checkbox" name="flowering" onChange={this.onCheck}/>
+      </Row>
+      <Row>
+      <label> toxic?  </label>
+      <input type='checkbox' name='toxic' onChange={this.onCheck}/>
+      </Row>
       <Row>
       <input value="add plant!" type ='submit'></input>
       </Row>

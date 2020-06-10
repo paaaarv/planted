@@ -27,14 +27,15 @@ code {
   font-size: 150%;
 }
 .form{
-  margin: 10% ;
+  margin-left: 10%;
   font-family: 'Shadows Into Light', cursive;
   font-size: 120%;
 
 }
-input{
+input,textarea{
   background:transparent;
   outline: none;
   border: 0px;
+  margin-left: 2%;
   border-bottom: 1px solid black;
 }
