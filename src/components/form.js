@@ -47,14 +47,15 @@ render() {
   return(
     <Container className='form'>
       <form onSubmit = {this.onSubmit}>
+      <h2> add a new plant </h2>
       <Row>
-      <label> plant name: </label>
+      <label> name: </label>
       <input name="name" type='text' value={this.state.name} onChange={this.onChange}/>
       </Row>
       <br/>
       <Row>
       <label> light: </label>
-      <textarea name='sun' value={this.state.sun} onChange={this.onChange}/>
+      <textarea  name='sun' value={this.state.sun} onChange={this.onChange}/>
       </Row>
             <br/>
       <Row>
@@ -81,8 +82,14 @@ render() {
       <input type='checkbox' name='toxic' onChange={this.onCheck}/>
       </Row>
       <Row>
+      <label> extra info: </label>
+      <textarea name='additional'  value={this.state.additional} onChange={this.onChange}/>
+      </Row>
+            <br/>
+      <Row>
       <input value="add plant!" type ='submit'></input>
       </Row>
+
       </form>
       </Container>
   )
