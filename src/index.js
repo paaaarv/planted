@@ -2,7 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import managePlants from './reducers/managePlants.js'
+
 import * as serviceWorker from './serviceWorker';
+
+
+let store = createStore(managePlants)
 
 ReactDOM.render(
   <React.StrictMode>
