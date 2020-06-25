@@ -3,9 +3,10 @@ import Container from 'react-bootstrap/container';
 import Row from 'react-bootstrap/row';
 import Col from 'react-bootstrap/col'
 import Plant from './plant.js'
+import { connect } from 'react-redux';
 
 
-export default class Form extends React.Component{
+class Form extends React.Component{
 
 
   constructor(props){
@@ -14,10 +15,7 @@ export default class Form extends React.Component{
       name: '',
       sun: '',
       water: '',
-      soil: '',
       fertilize: '',
-      repot: '',
-      propagate: '',
       flowering: false,
       poisonous: false,
       additional: ''
@@ -38,16 +36,17 @@ export default class Form extends React.Component{
   }
 
   onSubmit = (e) =>{
-    event.preventDefault();
     debugger
+    this.props.addPlant(this.state)
 
 
   }
 
+
 render() {
   return(
     <Container className='form'>
-      <form onSubmit = {this.onSubmit}>
+      <form onSubmit = {(event) => this.onSubmit(event)}>
       <h2> add a new plant </h2>
       <Row>
       <label> name: </label>
@@ -62,11 +61,6 @@ render() {
       <Row>
       <label> water: </label>
       <textarea name='water'  value={this.state.water} onChange={this.onChange}/>
-      </Row>
-            <br/>
-      <Row>
-      <label> soil: </label>
-      <input name='soil' type='text' value={this.state.soil} onChange={this.onChange}/>
       </Row>
             <br/>
       <Row>
@@ -96,3 +90,15 @@ render() {
   )
 }
 }
+const mapDispatchToProps = dispatch =>{
+  return{
+    addPlant: (e) => dispatch({type: "ADD_PLANT",payload: e})
+  }
+}
+
+const mapStateToProps = state => {
+  return{
+    items:state.items
+  }
+};
+export default connect(mapStateToProps,mapDispatchToProps)(Form);
