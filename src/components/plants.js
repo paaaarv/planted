@@ -7,9 +7,10 @@ class Plants extends React.Component{
 
 
   render(){
+    const plants = this.props.plants.map((plant)=><li> {plant} </li> )
     return(
       <div>
-      <h1> {this.props.name}</h1>
+      <h1>{plants}</h1>
       </div>
 
     )
@@ -19,4 +20,4 @@ class Plants extends React.Component{
 const mapStateToProps = state => {
   return {plants: state.plants}
 }
-export default connect(mapStateToProps)(Plant);
+export default connect(mapStateToProps)(Plants);
