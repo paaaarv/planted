@@ -36,7 +36,7 @@ class Form extends React.Component{
   }
 
   onSubmit = (e) =>{
-    debugger
+    e.preventDefault();
     this.props.addPlant(this.state)
 
 
@@ -98,7 +98,7 @@ const mapDispatchToProps = dispatch =>{
 
 const mapStateToProps = state => {
   return{
-    items:state.items
+    plants:state.plants
   }
 };
 export default connect(mapStateToProps,mapDispatchToProps)(Form);

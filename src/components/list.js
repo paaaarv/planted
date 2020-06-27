@@ -2,10 +2,9 @@ import React from 'react';
 import Container from 'react-bootstrap/container';
 import Col from 'react-bootstrap/col';
 import Row from 'react-bootstrap/row';
+import { connect } from 'react-redux';
 
-
-
-export default class List extends React.Component{
+class List extends React.Component{
 
 
 
@@ -28,3 +27,8 @@ export default class List extends React.Component{
     )
   }
 }
+const mapStateToProps = state =>{
+  return{plants:state.plants}
+}
+
+export default connect(mapStateToProps)(List)

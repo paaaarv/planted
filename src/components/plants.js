@@ -7,10 +7,10 @@ class Plants extends React.Component{
 
 
   render(){
-    const plants = this.props.plants.map((plant)=><li> {plant} </li> )
+
     return(
       <div>
-      <h1>{plants}</h1>
+      <h1></h1>
       </div>
 
     )
