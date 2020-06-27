@@ -2,7 +2,6 @@ import React from 'react';
 import Container from 'react-bootstrap/container';
 import Row from 'react-bootstrap/row';
 import Col from 'react-bootstrap/col'
-import Plants from './plants.js'
 import { connect } from 'react-redux';
 
 

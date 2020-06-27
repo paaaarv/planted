@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/container';
 import Col from 'react-bootstrap/col';
 import Row from 'react-bootstrap/row';
 import { connect } from 'react-redux';
+import Plant from './plant.js'
 
 class List extends React.Component{
 
@@ -10,6 +11,8 @@ class List extends React.Component{
 
 
   render(){
+    debugger
+    const plant = this.props.plants.map(plant=><Plant name={plant.name} sun={plant.sun} water={plant.water} fertilize={plant.fertilize}/>)
     return(
       <div>
       <Container className="container" fluid= {true}>
@@ -22,6 +25,7 @@ class List extends React.Component{
       <Col> || </Col>
       <Col> FERTILIZER </Col>
       </Row>
+      {plant}
       </Container>
       </div>
     )
