@@ -15,6 +15,8 @@ class List extends React.Component{
     const plant = this.props.plants.map(plant=><Plant name={plant.name} sun={plant.sun} water={plant.water} fertilize={plant.fertilize}/>)
     return(
       <div>
+
+      <h1>• P L A N T  •   C A R E • </h1> <br/> <br/> 
       <Container className="container" fluid= {true}>
       <Row className='heading'>
       <Col> NAME </Col>

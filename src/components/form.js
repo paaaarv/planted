@@ -44,6 +44,8 @@ class Form extends React.Component{
 
 render() {
   return(
+    <div>
+    <h1> • A D D • A • P L A N T • </h1>
     <Container className='form'>
       <form onSubmit = {(event) => this.onSubmit(event)}>
       <h2> add a new plant </h2>
@@ -86,6 +88,7 @@ render() {
 
       </form>
       </Container>
+      </div>
   )
 }
 }
