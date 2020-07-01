@@ -12,22 +12,22 @@ export default class Tab extends React.Component{
   render(){
 
     return(
-      <Row>
+      <Row className="tab">
       <Col>
       <NavLink  to="/">
         home
       </NavLink>
       </Col>
-      <Col>
+     <Col>
       <NavLink  to="/plants">
         plant care
       </NavLink>
-      </Col>
-      <Col>
+    </Col>
+     <Col>
       <NavLink  to="/add">
         add a plant
       </NavLink>
-      </Col>
+     </Col>
     </Row>
 
     )
