@@ -16,7 +16,7 @@ class List extends React.Component{
     return(
       <div>
 
-      <h1>• P L A N T  •   C A R E • </h1> <br/> <br/> 
+      <h1> PLANT CARE </h1> <br/> <br/> 
       <Container className="container" fluid= {true}>
       <Row className='heading'>
       <Col> NAME </Col>
