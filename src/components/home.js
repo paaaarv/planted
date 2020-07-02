@@ -2,7 +2,7 @@ import React from 'react';
 
 
 
-export default class Welcome extends React.Component{
+class Home extends React.Component{
 
 
 
@@ -12,6 +12,8 @@ export default class Welcome extends React.Component{
         <h1> w e l c o m e </h1>
 
         <h4> planted -- a way for you to keep track of the little friends you've brought into your home!</h4>
+
+        <br/> <br/>
       </div>
     )
   }
@@ -19,3 +21,8 @@ export default class Welcome extends React.Component{
 
 
 }
+
+const mapStateToProps = state => {
+  return{plants: state.plants}
+}
+export default connect (mapStateToProps)(Home)
