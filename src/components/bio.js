@@ -11,15 +11,23 @@ export default class Bio extends React.Component{
   render(){
     return(
       <div className='bio'>
-          <h4> {this.props.name}</h4>
           <div>
-          <h3>{this.props.sun} </h3>
+          <h3> {this.props.name}</h3>
           </div>
-          <div>
-          <h3>{this.props.water} </h3>
+
+          <div className='details'>
+          <h4> light </h4>
+          <p>{this.props.sun} </p>
           </div>
-          <div>
-          <h3>{this.props.fertilize} </h3>
+
+          <div className='details'>
+          <h4> water </h4>
+          <p>{this.props.water} </p>
+          </div>
+    
+          <div className='details'>
+          <h4> fertilize </h4>
+          <p>{this.props.fertilize} </p>
           </div>
       </div>
 

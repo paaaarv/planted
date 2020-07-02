@@ -7,7 +7,7 @@ class Home extends React.Component{
 
 
   render(){
-    const plants = this.props.plants.map(plant => <div> <Bio name={plant.name} sun={plant.sun}/> </div>)
+    const plants = this.props.plants.map(plant => <div> <Bio name={plant.name} sun={plant.sun} light={plant.light}/> </div>)
     return(
       <div>
         <h1> w e l c o m e </h1>

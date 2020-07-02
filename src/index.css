@@ -59,19 +59,30 @@ h1 {
 
 }
 
-h4 {
+h3 {
   font-family: "Amatic SC", cursive;
-  font-size:200%;
+  font-size:300%;
+  text-align: center;
+  margin-bottom: 1em;
+
 }
 .bio{
   float:left;
-  margin: 1em; 
+  margin: 1em;
   width: 20em;
   background-color: white;
   border: 2px double black;
   font-family: 'Shadows Into Light', cursive;
-  display: flex;
+  display: block;
   justify-content: center;
+}
+.details{
+  float: left;
+  width: 10em;
+  display: inline-block;
+  margin: .5em;
+  border: .5px solid black;
+
 }
 .tab{
   margin: 2em;
