@@ -59,6 +59,20 @@ h1 {
 
 }
 
+h4 {
+  font-family: "Amatic SC", cursive;
+  font-size:200%;
+}
+.bio{
+  float:left;
+  margin: 1em; 
+  width: 20em;
+  background-color: white;
+  border: 2px double black;
+  font-family: 'Shadows Into Light', cursive;
+  display: flex;
+  justify-content: center;
+}
 .tab{
   margin: 2em;
   font-family: "Amatic SC", cursive;
