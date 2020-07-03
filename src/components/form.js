@@ -51,22 +51,22 @@ render() {
       <h2> add a new plant </h2>
       <Row>
       <label> name: </label>
-      <input name="name" type='text' value={this.state.name} onChange={this.onChange}/>
+      <input required name="name" type='text' value={this.state.name} onChange={this.onChange}/>
       </Row>
       <br/>
       <Row>
       <label> light: </label>
-      <textarea  name='sun' value={this.state.sun} onChange={this.onChange}/>
+      <textarea required name='sun' value={this.state.sun} onChange={this.onChange}/>
       </Row>
             <br/>
       <Row>
       <label> water: </label>
-      <textarea name='water'  value={this.state.water} onChange={this.onChange}/>
+      <textarea required name='water'  value={this.state.water} onChange={this.onChange}/>
       </Row>
             <br/>
       <Row>
       <label> fertilize: </label>
-      <input name='fertilize' type='text' value={this.state.fertilize}/>
+      <input name='fertilize' type='text' value={this.state.fertilize} onChange={this.onChange}/>
       </Row>
             <br/>
       <Row>
