@@ -6,18 +6,21 @@ import React from 'react' ;
 
 
 export default class Bio extends React.Component{
-    constructor(props){
-      super(props)
-    }
+  constructor(props){
+    super(props)
 
-    details = () => {
-      this.props.map(prop => 
-        <div className='details'>
-        <h3>  hi </h3>
-        </div>
+  }
+  componentDidMount= () =>{
+    this.details()
+  }
 
-    )
-    }
+
+
+   details = () =>{
+     debugger
+     this.props.map(info =>
+    <div className='bio'> <h3> {info} </h3> </div>)}
+
   render(){
 
     return(
@@ -36,7 +39,7 @@ export default class Bio extends React.Component{
           <p>{this.props.water} </p>
           </div>
 
-          {this.details}
+
       </div>
 
 
