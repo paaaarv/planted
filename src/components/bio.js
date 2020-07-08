@@ -10,16 +10,18 @@ export default class Bio extends React.Component{
     super(props)
 
   }
-  componentDidMount= () =>{
-    this.details()
-  }
 
 
 
    details = () =>{
-     debugger
-     this.props.map(info =>
-    <div className='bio'> <h3> {info} </h3> </div>)}
+     const label = ['light', 'water', 'fertilize', 'additional']
+     const info = []
+
+     for(let i=0;i<label.length;i++){
+       info.push(<div className='details'><h4>{label[i]}</h4><p>{this.props.characteristics[i]}</p></div>)
+     }
+     return(info)
+     }
 
   render(){
 
@@ -29,17 +31,7 @@ export default class Bio extends React.Component{
           <h3> {this.props.name}</h3>
           </div>
 
-          <div className='details'>
-          <h4> light </h4>
-          <p>{this.props.sun} </p>
-          </div>
-
-          <div className='details'>
-          <h4> water </h4>
-          <p>{this.props.water} </p>
-          </div>
-
-
+          {this.details()}
       </div>
 
 

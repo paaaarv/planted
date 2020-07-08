@@ -16,7 +16,7 @@ class Form extends React.Component{
       water: '',
       fertilize: '',
       flowering: false,
-      poisonous: false,
+      toxic: false,
       additional: ''
     }
   }
