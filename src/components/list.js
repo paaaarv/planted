@@ -18,7 +18,7 @@ class List extends React.Component{
 
       <h1> PLANT CARE </h1> <br/> <br/>
       <Container className="container" fluid= {true}>
-      <Row className='heading'>
+      <Row className='care-headings'>
       <Col> NAME </Col>
       <Col> || </Col>
       <Col> LIGHT </Col>

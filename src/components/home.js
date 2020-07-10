@@ -13,7 +13,7 @@ class Home extends React.Component{
         <h1> w e l c o m e </h1>
 
         <h4> planted -- a way for you to keep track of the little friends you've brought into your home!</h4>
-          <div>
+          <div className="bio-container">
           {plants}
           </div>
         <br/> <br/>

@@ -18,7 +18,7 @@ export default class Bio extends React.Component{
      const info = []
 
      for(let i=0;i<label.length;i++){
-       info.push(<div className='details'><h4>{label[i]}</h4><p>{this.props.characteristics[i]}</p></div>)
+       info.push(<div className='details'><h4 className='heading'>{label[i]}</h4><p>{this.props.characteristics[i]}</p></div>)
      }
      return(info)
      }
