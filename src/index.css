@@ -23,17 +23,26 @@ code {
 }
 
 .care-headings{
+  font-family: "Amatic SC", cursive;
+  font-size: 6vw;
+  text-align:center;
+}
+.list-details{
   font-family: 'Shadows Into Light', cursive;
-  font-size: 200%;
+  font-size: 3vw;
+  margin-top: .5em;
+
+
+
 }
 
 .form{
   display: flex;
   justify-content: center;
   margin-left: auto;
-  width: 40%;
+  width: 40vw;
   font-family: 'Shadows Into Light', cursive;
-  font-size: 120%;
+  font-size: 2vw;
   border: 4px double black;
   padding: 2em 2em;
   background-color:#ebedeb;
@@ -54,7 +63,7 @@ h1 {
   display: flex;
   justify-content: center;
   font-family: "Amatic SC", cursive;
-  font-size: 500%;
+  font-size: 11vw;
   margin-left: auto;
 
 
@@ -62,7 +71,7 @@ h1 {
 
 h3 {
   font-family: "Amatic SC", cursive;
-  font-size:300%;
+  font-size:6vw;
   text-align: center;
   margin-bottom: 1em;
 
@@ -73,8 +82,8 @@ h3 {
 
 }
 .bio{
-  margin: .8em;
-  width: 21em;
+  margin: .8vw;
+  width: 50vw;
   background-color: white;
   border: 2px double black;
   font-family: 'Shadows Into Light', cursive;
@@ -83,11 +92,11 @@ h3 {
 }
 .details{
   overflow-wrap: break-word;
-  width: 8em;
+  width: 20vw;
   vertical-align: top;
   display: inline-block;
-  margin:.5em;
-  border: .5px solid black;
+  margin:.5vw;
+  border: 2px dotted black;
 
 }
 
@@ -101,5 +110,5 @@ h3 {
   text-align: center;
   margin: 2em;
   font-family: "Amatic SC", cursive;
-  font-size: 200%;
+  font-size: 5vw;
 }

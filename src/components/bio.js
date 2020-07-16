@@ -1,8 +1,8 @@
 import React from 'react' ;
 
+import { FaTrash } from 'react-icons/fa'
 
-
-
+import { connect } from 'react-redux';
 
 
 export default class Bio extends React.Component{
@@ -10,16 +10,22 @@ export default class Bio extends React.Component{
     super(props)
 
   }
+  componentDidUpdate(){
+    this.details();
+  }
 
 
 
    details = () =>{
      const label = ['light', 'water', 'fertilize', 'additional']
      const info = []
+     debugger
+     if (this.props.characteristics[0] !== undefined){
 
      for(let i=0;i<label.length;i++){
+       if(this.props.characteristics[i] !== ''){
        info.push(<div className='details'><h4 className='heading'>{label[i]}</h4><p>{this.props.characteristics[i]}</p></div>)
-     }
+     }}}
      return(info)
      }
 
@@ -32,6 +38,9 @@ export default class Bio extends React.Component{
           </div>
 
           {this.details()}
+          <br/><br/><br/>
+          <button onClick={()=>this.props.delete(this.props.name)}><FaTrash /></button>
+          <br/>
       </div>
 
 

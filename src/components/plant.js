@@ -9,7 +9,7 @@ export default class Plant extends React.Component{
   render(){
 
     return(
-      <Row>
+      <Row className="list-details">
       <Col> {this.props.name} </Col>
       <Col> {this.props.sun} </Col>
       <Col> {this.props.water}</Col>

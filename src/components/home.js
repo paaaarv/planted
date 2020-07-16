@@ -7,7 +7,7 @@ class Home extends React.Component{
 
 
   render(){
-    const plants = this.props.plants.map((plant) => <Bio name={plant.name} characteristics={[plant.sun, plant.water, plant.fertilize, plant.additional]}/>)
+    const plants = this.props.plants.map((plant) => <Bio name={plant.name} characteristics={[plant.sun, plant.water, plant.fertilize, plant.additional]} delete= {this.props.delete}/>)
     return(
       <div>
         <h1> w e l c o m e </h1>
@@ -28,4 +28,10 @@ class Home extends React.Component{
 const mapStateToProps = state => {
   return{plants: state.plants}
 }
-export default connect (mapStateToProps)(Home)
+
+const mapDispatchToProps = dispatch =>{
+  return{
+    delete: (e)=> dispatch({type: "DELETE_PLANT", payload: e})
+  }
+}
+export default connect (mapStateToProps, mapDispatchToProps)(Home)
