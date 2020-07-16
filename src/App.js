@@ -6,6 +6,7 @@ import List from './components/list.js'
 import Form from './components/form.js'
 import Tab from './components/tab.js'
 import Bio from './components/bio.js'
+import Login from './components/login.js'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Route exact path='/' component={Home}/>
       <Route exact path='/add' component={Form}/>
       <Route exact path= '/plants' component={List}/>
+      <Route exact path='/login' component={Login}/>
     </Router>
 
   );
