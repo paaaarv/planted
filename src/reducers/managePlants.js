@@ -14,7 +14,7 @@ export default function managePlants(state={ plants:[]}, action){
 
 
     case "DELETE_PLANT":
-        return{plants: [state.plants.filter(plant => plant.name !== action.payload)]}
+        return{...state, plants: state.plants.filter(plant => plant.name !== action.payload)}
 
     default:
       return state;

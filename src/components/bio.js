@@ -10,22 +10,17 @@ export default class Bio extends React.Component{
     super(props)
 
   }
-  componentDidUpdate(){
-    this.details();
-  }
 
 
 
    details = () =>{
      const label = ['light', 'water', 'fertilize', 'additional']
      const info = []
-     debugger
-     if (this.props.characteristics[0] !== undefined){
 
      for(let i=0;i<label.length;i++){
        if(this.props.characteristics[i] !== ''){
        info.push(<div className='details'><h4 className='heading'>{label[i]}</h4><p>{this.props.characteristics[i]}</p></div>)
-     }}}
+     }}
      return(info)
      }
 
