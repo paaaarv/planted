@@ -9,10 +9,11 @@ export default class Login extends React.Component{
 
   constructor(props){
     super(props)
-    this.state= {
+    this.initialState= {
       username:'',
       password: ''
     }
+    this.state=this.initialState;
   }
 
   handleChange = (e) => {
@@ -22,6 +23,7 @@ export default class Login extends React.Component{
   }
   handleSubmit = (e)=>{
     e.preventDefault();
+    this.setState(this.initialState)
   }
   render(){
     return(

@@ -10,7 +10,7 @@ class Form extends React.Component{
 
   constructor(props){
     super(props)
-    this.state={
+    this.initialState={
       name: '',
       sun: '',
       water: '',
@@ -19,6 +19,7 @@ class Form extends React.Component{
       toxic: false,
       additional: ''
     }
+    this.state=this.initialState;
   }
 
   onChange = (e) =>{
@@ -35,6 +36,7 @@ class Form extends React.Component{
 
   onSubmit = (e) =>{
     e.preventDefault();
+    this.setState(this.initialState)
     this.props.addPlant(this.state)
 
 
