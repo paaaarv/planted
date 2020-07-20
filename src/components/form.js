@@ -48,6 +48,9 @@ render() {
     <div>
     <h1> NEW  PLANT  </h1>
     <Container className='form'>
+    <div id="loginbutton">
+      login || sign up
+    </div>
       <form onSubmit = {(event) => this.onSubmit(event)}>
       <h2> add a new plant </h2>
       <Row>

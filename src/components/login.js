@@ -3,6 +3,7 @@ import React from 'react';
 import Container from 'react-bootstrap/container';
 import Row from 'react-bootstrap/row';
 import Col from 'react-bootstrap/col'
+import  Button  from 'react-bootstrap/button'
 
 
 export default class Login extends React.Component{
@@ -12,8 +13,11 @@ export default class Login extends React.Component{
     this.initialState= {
       username:'',
       password: '',
-      confirm: ''
+      confirm: '',
+      hidden: 'hidden',
+      disabled: 'false'
     }
+    this.handleSignup=this.handleSignup.bind(this)
     this.state=this.initialState;
   }
 
@@ -23,8 +27,11 @@ export default class Login extends React.Component{
     })
   }
 
-  handleSignup = () =>{
-    debugger
+  handleSignup(){
+    this.setState({
+      hidden: 'visible',
+      disabled: !this.state.disabled
+    })
   }
 
   handleSubmit = (e)=>{
@@ -33,44 +40,56 @@ export default class Login extends React.Component{
   }
   render(){
     return(
-
       <Container className='form'>
+
       <form onSubmit={(event)=>this.handleSubmit(event)}>
       <Row>
+      <Col>
+        <Button disabled={this.state.disabled} size='lg' variant='outline-success' type='button' onClick={() => this.handleSignup()}>login</Button>  <Button disabled={!this.state.disabled} size='lg'variant = 'outline-success' type='button' onClick={() => this.handleSignup()} >signup</Button>
+      </Col>
+      </Row>
+      <br/>
+      <Row>
+      <div>
       <Col>
         username:
       </Col>
       <Col>
       <input required name='username' placeholder='username' type='text' onChange={this.handleChange}/>
       </Col>
+      </div>
       </Row>
+
       <Row>
+      <div>
       <Col>
         password:
       </Col>
       <Col>
       <input required name='password' placeholder='password' type='password' onChange={this.handleChange}/>
       </Col>
+      </div>
       </Row>
+
       <Row>
-        <div id='confirm' hidden>
+        <div id='confirm' style={{visibility: this.state.hidden}}>
         <Col>
           confirm:
         </Col>
         <Col>
           <input type='password' placeholder='password confirm' name='confirm' onChange={this.handleChange}/>
         </Col>
-
-
          </div>
       </Row>
+
       <br/>
       <Row>
-      <button onClick = {this.handleSignup} type='submit'>  sign up </button>
       <br/>
-      <button type='submit'>login</button>
-
+      <Col>
+      <Button size='lg' variant='outline-success' type='submit'>submit</Button>
+      </Col>
       </Row>
+
       </form>
       </Container>
 
