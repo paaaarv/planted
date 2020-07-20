@@ -11,7 +11,8 @@ export default class Login extends React.Component{
     super(props)
     this.initialState= {
       username:'',
-      password: ''
+      password: '',
+      confirm: ''
     }
     this.state=this.initialState;
   }
@@ -21,6 +22,11 @@ export default class Login extends React.Component{
       [e.target.name]: e.target.value
     })
   }
+
+  handleSignup = () =>{
+    debugger
+  }
+
   handleSubmit = (e)=>{
     e.preventDefault();
     this.setState(this.initialState)
@@ -35,7 +41,7 @@ export default class Login extends React.Component{
         username:
       </Col>
       <Col>
-      <input required name='username' type='text' onChange={this.handleChange}/>
+      <input required name='username' placeholder='username' type='text' onChange={this.handleChange}/>
       </Col>
       </Row>
       <Row>
@@ -43,11 +49,28 @@ export default class Login extends React.Component{
         password:
       </Col>
       <Col>
-      <input required name='password'type='password' onChange={this.handleChange}/>
+      <input required name='password' placeholder='password' type='password' onChange={this.handleChange}/>
       </Col>
       </Row>
-      <br/><br/>
+      <Row>
+        <div id='confirm' hidden>
+        <Col>
+          confirm:
+        </Col>
+        <Col>
+          <input type='password' placeholder='password confirm' name='confirm' onChange={this.handleChange}/>
+        </Col>
+
+
+         </div>
+      </Row>
+      <br/>
+      <Row>
+      <button onClick = {this.handleSignup} type='submit'>  sign up </button>
+      <br/>
       <button type='submit'>login</button>
+
+      </Row>
       </form>
       </Container>
 
