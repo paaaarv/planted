@@ -39,7 +39,7 @@ code {
 .form{
   display: flex;
   justify-content: center;
-  text-align: center;
+  text-align: left;
   width: 40vw;
   font-family: 'Shadows Into Light', cursive;
   font-size: 2vw;

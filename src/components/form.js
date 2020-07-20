@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/container';
 import Row from 'react-bootstrap/row';
 import Col from 'react-bootstrap/col'
 import { connect } from 'react-redux';
-
+import Button from 'react-bootstrap/button'
 
 class Form extends React.Component{
 
@@ -46,48 +46,60 @@ class Form extends React.Component{
 render() {
   return(
     <div>
-    <h1> NEW  PLANT  </h1>
     <Container className='form'>
-    <div id="loginbutton">
-      login || sign up
-    </div>
       <form onSubmit = {(event) => this.onSubmit(event)}>
-      <h2> add a new plant </h2>
-      <Row>
-      <label> name: </label>
+      <h3> add a new plant </h3>
+      <Row className='p-2'>
+      <Col> name: </Col>
+      <Col>
       <input required name="name" type='text' value={this.state.name} onChange={this.onChange}/>
+      </Col>
       </Row>
-      <br/>
-      <Row>
-      <label> light: </label>
-      <textarea required name='sun' value={this.state.sun} onChange={this.onChange}/>
+
+      <Row className='p-2'>
+      <Col>light: </Col>
+      <Col>
+      <input required name='sun' value={this.state.sun} onChange={this.onChange}/>
+      </Col>
       </Row>
-            <br/>
-      <Row>
-      <label> water: </label>
-      <textarea required name='water'  value={this.state.water} onChange={this.onChange}/>
+
+      <Row className='p-2'>
+      <Col>water: </Col>
+      <Col>
+      <input required name='water'  value={this.state.water} onChange={this.onChange}/>
+      </Col>
       </Row>
-            <br/>
-      <Row>
-      <label> fertilize: </label>
-      <input name='fertilize' type='text' value={this.state.fertilize} onChange={this.onChange}/>
+
+      <Row className='p-2'>
+      <Col> fertilize: </Col>
+      <Col>
+      <input name='fertilize' value={this.state.fertilize} onChange={this.onChange}/>
+      </Col>
       </Row>
-            <br/>
-      <Row>
-      <label> flowering?  </label>
+
+      <Row className='p-4'>
+      <Col> flowering?  </Col>
+      <Col>
       <input type="checkbox" name="flowering" onChange={this.onCheck}/>
-      </Row>
-      <Row>
-      <label> toxic?  </label>
+      </Col>
+
+      <Col> toxic?  </Col>
+      <Col>
       <input type='checkbox' name='toxic' onChange={this.onCheck}/>
+      </Col>
       </Row>
-      <Row>
-      <label> extra info: </label>
+
+      <Row className='p-2'>
+      <Col> extra info: </Col>
+      <Col>
       <textarea name='additional'  value={this.state.additional} onChange={this.onChange}/>
+      </Col>
       </Row>
-            <br/>
-      <Row>
-      <input value="add plant!" type ='submit'></input>
+        <br/>
+      <Row className='p-1'>
+      <Col>
+      <Button size='lg' variant='outline-success' type ='submit'> add plant </Button>
+      </Col>
       </Row>
 
       </form>
