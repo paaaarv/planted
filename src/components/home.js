@@ -7,7 +7,7 @@ class Home extends React.Component{
 
 
   render(){
-    const plants = this.props.plants.map((plant) => <Bio name={plant.name} characteristics={[plant.sun, plant.water, plant.fertilize, plant.additional]} delete= {this.props.delete}/>)
+    const plants = this.props.plants.map((plant) => <Bio name={plant.name} characteristics={[plant.sun, plant.water, plant.fertilize, plant.additional]} delete= {this.props.delete}  pictures={plant.pictures[0]}/>)
     return(
       <div>
         <h1> w e l c o m e </h1>

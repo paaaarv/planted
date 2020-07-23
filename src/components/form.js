@@ -109,11 +109,12 @@ render() {
         <Row className ='p-1'>
         <Col>
         <ImageUploader
-          withIcon={true}
+
           buttonText="upload image"
           onChange={this.onImageDrop}
-          imgExtension={[".jpg", ".gif", ".png", ".gif"]}
-          maxFileSize={5242880}
+          withPreview={true}
+          withLabel={false}
+          singleImage={true}
         />
         </Col>
         </Row>
