@@ -3,7 +3,8 @@ import Container from 'react-bootstrap/container';
 import Row from 'react-bootstrap/row';
 import Col from 'react-bootstrap/col'
 import { connect } from 'react-redux';
-import Button from 'react-bootstrap/button'
+import Button from 'react-bootstrap/button';
+import ImageUploader from "react-images-upload";
 
 class Form extends React.Component{
 
@@ -17,7 +18,8 @@ class Form extends React.Component{
       fertilize: '',
       flowering: false,
       toxic: false,
-      additional: ''
+      additional: '',
+      pictures: []
     }
     this.state=this.initialState;
   }
@@ -43,9 +45,18 @@ class Form extends React.Component{
   }
 
 
+  onImageDrop = (pic) =>{
+    this.setState({
+      pictures: this.state.pictures.concat(pic)
+    })
+    debugger
+  }
+
 render() {
   return(
     <div>
+
+
     <Container className='form'>
       <form onSubmit = {(event) => this.onSubmit(event)}>
       <h3> add a new plant </h3>
@@ -55,7 +66,6 @@ render() {
       <input required name="name" type='text' value={this.state.name} onChange={this.onChange}/>
       </Col>
       </Row>
-
       <Row className='p-2'>
       <Col>light: </Col>
       <Col>
@@ -96,6 +106,18 @@ render() {
       </Col>
       </Row>
         <br/>
+        <Row className ='p-1'>
+        <Col>
+        <ImageUploader
+          withIcon={true}
+          buttonText="upload image"
+          onChange={this.onImageDrop}
+          imgExtension={[".jpg", ".gif", ".png", ".gif"]}
+          maxFileSize={5242880}
+        />
+        </Col>
+        </Row>
+        <br/><br/>
       <Row className='p-1'>
       <Col>
       <Button size='lg' variant='outline-success' type ='submit'> add plant </Button>
